@@ -177,6 +177,7 @@ a { color: inherit; }
 .shot-title { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 1.8rem; color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,.4); }
 .shot-plumb { background: radial-gradient(circle at 80% 20%, #38bdf8 0, transparent 45%), linear-gradient(135deg, #0c4a6e, #082f49); }
 .shot-tax { background: radial-gradient(circle at 80% 20%, #fbbf24 0, transparent 45%), linear-gradient(135deg, #78350f, #1c1917); }
+.shot-tile { background: radial-gradient(circle at 80% 20%, #2dd4bf 0, transparent 45%), linear-gradient(135deg, #134e4a, #0f172a); }
 .work-body { padding: 24px 28px 28px; }
 .work-body h3 { font-size: 1.3rem; margin-bottom: 8px; }
 .work-body p { color: var(--muted); }
