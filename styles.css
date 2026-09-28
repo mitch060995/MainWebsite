@@ -76,6 +76,8 @@ a { color: inherit; }
 .steps li.active span { color: var(--accent); }
 .scroll-hint { color: var(--muted); font-size: .9rem; transition: opacity .3s; }
 .build:not([data-stage="0"]) .scroll-hint { opacity: 0; }
+.scroll-hint .arrow { display: inline-block; color: var(--accent); animation: nudge 1.4s ease-in-out infinite; }
+@keyframes nudge { 50% { transform: translateY(4px); } }
 
 /* Particle stage: particles form a new shape at each step, then become a real site */
 .stage { position: relative; width: 100%; aspect-ratio: 4 / 3; }
@@ -177,7 +179,7 @@ a { color: inherit; }
   .steps li { font-size: .9rem; }
   .steps li span { display: none; }
   .steps li.active { transform: none; }
-  .scroll-hint { display: none; }
+  .scroll-hint { font-size: .85rem; margin-top: -4px; }
   .site-bar { font-size: .7rem; }
   .site-hero strong { margin-bottom: 8px; }
   .site-cards div { font-size: .75rem; }
