@@ -75,7 +75,9 @@ a { color: inherit; }
 .steps li.active { color: var(--text); transform: translateX(8px); }
 .steps li.active span { color: var(--accent); }
 .scroll-hint { color: var(--muted); font-size: .9rem; transition: opacity .3s; }
-.build:not([data-stage="0"]) .scroll-hint { opacity: 0; }
+.scroll-hint.swap { opacity: 0; }
+.build[data-stage="4"] .scroll-hint { color: var(--accent); }
+.build[data-stage="4"] .scroll-hint .arrow { display: none; }
 .scroll-hint .arrow { display: inline-block; color: var(--accent); animation: nudge 1.4s ease-in-out infinite; }
 @keyframes nudge { 50% { transform: translateY(4px); } }
 

@@ -6,6 +6,16 @@
   const stage = section.querySelector('.stage');
   const site = section.querySelector('.site');
   const canvas = section.querySelector('.particles');
+  const hint = section.querySelector('.scroll-hint');
+  const hintText = hint.querySelector('.hint-text');
+  const HINTS = [
+    'Scroll to watch a site come together',
+    'Keep scrolling, the design is taking shape',
+    'Nearly there, it’s being built',
+    'Going live…',
+    '✓ Finished, and looked after',
+  ];
+  let hintStep = 0, hintTimer;
   const ctx = canvas.getContext('2d');
   const STAGES = 5;
   const N = 1400;
@@ -125,6 +135,12 @@
     const within = progress * STAGES - step;  // 0..1 inside current step
 
     section.dataset.stage = step;
+    if (step !== hintStep) {  // fade the hint out, swap the words, fade back in
+      hintStep = step;
+      clearTimeout(hintTimer);
+      hint.classList.add('swap');
+      hintTimer = setTimeout(() => { hintText.textContent = HINTS[hintStep]; hint.classList.remove('swap'); }, 200);
+    }
     steps.forEach((li, i) => {
       li.classList.toggle('active', i === step);
       li.classList.toggle('done', i < step);
